@@ -9,11 +9,9 @@ namespace Modele.MonProjet.Entities
 {
     public class Statut
     {
-        [Key]
+
         private int ID { get; set; }
 
-        [Required]
-        [MaxLength(50)]
         private string Libelle { get; set;  }
 
     }

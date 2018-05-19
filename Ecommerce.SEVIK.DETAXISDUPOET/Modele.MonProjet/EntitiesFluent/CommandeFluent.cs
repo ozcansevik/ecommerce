@@ -18,7 +18,7 @@ namespace Modele.MonProjet.EntitiesFluent
             HasKey(c => c.Id);
 
             Property(c => c.Id).HasColumnName("CAT_ID").IsRequired().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(c => c.DateCommand).HasColumnName("CAT_DATE_COMMANDE").IsRequired()
+            Property(c => c.DateCommand).HasColumnName("CAT_DATE_COMMANDE").IsRequired();
             Property(c => c.Observation).HasColumnName("CAT_OBSERVATION").IsRequired().HasMaxLength(50);
             Property(c => c.StatusID).HasColumnName("CAT_STATUS_ID").IsRequired().HasForeignKey(cc => cc.StatusID);
             Property(c => c.ClientID).HasColumnName("CAT_CLIENT_ID").IsRequired().HasForeignKey(ss => ss.ClientID);
