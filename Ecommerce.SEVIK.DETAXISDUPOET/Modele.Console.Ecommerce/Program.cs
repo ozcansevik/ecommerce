@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using Modele.MonProjet.Configuration;
 
 namespace Modele.Console.Ecommerce
 {
@@ -10,6 +7,8 @@ namespace Modele.Console.Ecommerce
     {
         static void Main(string[] args)
         {
+            var a = new Contexte();
+            a.Clients.tolist();
         }
     }
 }
