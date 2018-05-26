@@ -23,6 +23,6 @@ namespace Modele.MonProjet.Entities
         public bool Actif { get; set; }
 
 
-        public ICollection<Commande> Commandes { get; set; }
+        public virtual ICollection<Commande> Commandes { get; set; }
     }
 }

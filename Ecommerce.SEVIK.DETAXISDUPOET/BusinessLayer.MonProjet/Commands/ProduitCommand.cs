@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace BusinessLayer.MonProjet.Commands
 {
     /// <summary>
-    /// COMMAND pour ajouter / modifier et supprimer un produit
+    /// COMMAND pour ajouter / modifier et supprimer un Produit
     /// </summary>
     public class ProduitCommand
     {
@@ -25,35 +25,43 @@ namespace BusinessLayer.MonProjet.Commands
         }
 
         /// <summary>
-        /// Ajouter le produit en base à partir du contexte
+        /// Ajouter le Produit en base à partir du contexte
         /// </summary>
-        /// <param name="p">Produit à ajouter</param>
-        /// <returns>Identifiant du produit ajouté</returns>
-        public int Ajouter(Produit p)
+        /// <param name="produit">Produit à ajouter</param>
+        /// <returns>Identifiant du Produit ajouté</returns>
+        public int Ajouter(Produit produit)
         {
-            _contexte.Produits.Add(p);
+            _contexte.Produits.Add(produit);
             return _contexte.SaveChanges();
         }
 
         /// <summary>
-        /// Modifier un produit déjà présent en base à partir du cotnexte
+        /// Modifier un Produit déjà présent en base à partir du contexte
         /// </summary>
-        /// <param name="p">Produit à modifier</param>
-        public void Modifier(Produit p)
+        /// <param name="changed">Produit à modifier</param>
+        public void Modifier(Produit changed)
         {
-            Produit upPrd = _contexte.Produits.Where(prd => prd.Id == p.Id).FirstOrDefault();
+            Produit upPrd = _contexte.Produits.Where(prd => prd.Id == changed.Id).FirstOrDefault();
             if (upPrd != null)
             {
-                upPrd.Libelle = p.Libelle;
-                upPrd.CategorieId = p.CategorieId;
+                upPrd.Id = changed.Id;
+                upPrd.Libelle = changed.Libelle;
+                upPrd.Description = changed.Description;
+                upPrd.Code = changed.Code;
+                upPrd.Actif = changed.Actif;
+                upPrd.Prix = changed.Prix;
+                upPrd.Stock = changed.Stock;
+                upPrd.CategorieId = changed.CategorieId;
+                upPrd.Categorie = changed.Categorie;
+                
             }
             _contexte.SaveChanges();
         }
 
         /// <summary>
-        /// Supprimer un produit en base à partir du contexte et de son identifiant
+        /// Supprimer un Produit en base à partir du contexte et de son identifiant
         /// </summary>
-        /// <param name="produitID">Identifiant du produit à supprimer</param>
+        /// <param name="produitID">Identifiant du Produit à supprimer</param>
         public void Supprimer(int produitID)
         {
             Produit delPrd = _contexte.Produits.Where(prd => prd.Id == produitID).FirstOrDefault();

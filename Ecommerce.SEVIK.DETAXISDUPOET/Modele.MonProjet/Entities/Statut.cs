@@ -14,7 +14,7 @@ namespace Modele.MonProjet.Entities
 
         public string Libelle { get; set;  }
 
-        public ICollection<Commande> Commandes { get; set; }
+        public virtual ICollection<Commande> Commandes { get; set; }
 
     }
 }

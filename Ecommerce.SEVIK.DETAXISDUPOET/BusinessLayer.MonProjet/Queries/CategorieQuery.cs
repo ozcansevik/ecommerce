@@ -8,11 +8,10 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.MonProjet.Queries
 {
-
     /// <summary>
-    /// QUERY pour récupérer des entités de types Produit
+    /// QUERY pour récupérer des entités de types Categorie
     /// </summary>
-    public class ProduitQuery
+    public class CategorieQuery
     {
         private readonly EcommerceContext _contexte;
 
@@ -20,28 +19,28 @@ namespace BusinessLayer.MonProjet.Queries
         /// Constructeur
         /// </summary>
         /// <param name="contexte">Contexte EF à utiliser</param>
-        public ProduitQuery(EcommerceContext contexte)
+        public CategorieQuery(EcommerceContext contexte)
         {
             _contexte = contexte;
         }
 
         /// <summary>
-        /// Récupérer tous les produits
+        /// Récupérer toutes les catégories
         /// </summary>
-        /// <returns>IQueryable de Produit</returns>
-        public IQueryable<Produit> GetAll()
+        /// <returns>IQueryable de Catégorie</returns>
+        public IQueryable<Categorie> GetAll()
         {
-            return _contexte.Produits;
+            return _contexte.Categories;
         }
 
         /// <summary>
-        /// Récupérer un produit par son ID
+        /// Récupérer une catégorie par son ID
         /// </summary>
-        /// <param name="id">Identifiant du produit à récupérer</param>
-        /// <returns>IQueryable de Produit</returns>
-        public IQueryable<Produit> GetByID(int id)
+        /// <param name="id">Identifiant de l catégorie à récupérer</param>
+        /// <returns>IQueryable de Catégorie</returns>
+        public IQueryable<Categorie> GetByID(int id)
         {
-            return _contexte.Produits.Where(p => p.Id == id);
+            return _contexte.Categories.Where(p => p.Id == id);
         }
     }
 }

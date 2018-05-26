@@ -34,7 +34,7 @@ namespace Modele.MonProjet.Entities
        
         public int CategorieId { get; set; }
 
-        public Categorie Categorie { get; set; }
+        public virtual Categorie Categorie { get; set; }
 
     }
 }

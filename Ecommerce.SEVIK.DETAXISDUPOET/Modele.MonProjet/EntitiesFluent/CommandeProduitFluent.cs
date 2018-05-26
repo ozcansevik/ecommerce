@@ -9,9 +9,9 @@ namespace Modele.MonProjet.EntitiesFluent
         public CommandeProduitFluent()
         {
             ToTable("APP_CommandeProduit");
-            HasKey(c => new { c.ProduitId, c.CommandeId });
+            HasKey(c => new { c.Id, c.CommandeId });
 
-            Property(c => c.ProduitId).HasColumnName("CAT_PRODUIT_ID").IsRequired().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(c => c.Id).HasColumnName("CAT_PRODUIT_ID").IsRequired().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(c => c.Quantite).HasColumnName("CAT_QUANTITE").IsRequired();
 
             HasRequired(cc => cc.Commande).WithMany(c => c.CommandeProduits).HasForeignKey(c => c.CommandeId);

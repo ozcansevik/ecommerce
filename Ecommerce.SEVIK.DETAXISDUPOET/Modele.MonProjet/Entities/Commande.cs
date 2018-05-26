@@ -29,7 +29,7 @@ namespace Modele.MonProjet.Entities
         
         public Client Client { get; set; }
         
-        public ICollection<CommandeProduit> CommandeProduits { get; set; }
+        public virtual ICollection<CommandeProduit> CommandeProduits { get; set; }
 
     }
 }

@@ -11,13 +11,13 @@ namespace Modele.MonProjet.Entities
     public class CommandeProduit
     {
         [Key]
-        public int ProduitId { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public int Quantite { get; set; }
 
         public int CommandeId { get; set; }
 
-        public Commande Commande { get; set; }
+        public virtual Commande Commande { get; set; }
     }
 }

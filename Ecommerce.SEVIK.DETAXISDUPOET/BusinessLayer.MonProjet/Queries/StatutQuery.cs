@@ -8,40 +8,40 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.MonProjet.Queries
 {
-
     /// <summary>
-    /// QUERY pour récupérer des entités de types Produit
+    /// QUERY pour récupérer des entités de types Statut
     /// </summary>
-    public class ProduitQuery
+    class StatutQuery
     {
+
         private readonly EcommerceContext _contexte;
 
         /// <summary>
         /// Constructeur
         /// </summary>
         /// <param name="contexte">Contexte EF à utiliser</param>
-        public ProduitQuery(EcommerceContext contexte)
+        public StatutQuery(EcommerceContext contexte)
         {
             _contexte = contexte;
         }
 
         /// <summary>
-        /// Récupérer tous les produits
+        /// Récupérer tous les Statuts
         /// </summary>
-        /// <returns>IQueryable de Produit</returns>
-        public IQueryable<Produit> GetAll()
+        /// <returns>IQueryable de Statut</returns>
+        public IQueryable<Statut> GetAll()
         {
-            return _contexte.Produits;
+            return _contexte.Statuts;
         }
 
         /// <summary>
-        /// Récupérer un produit par son ID
+        /// Récupérer un statut par son ID
         /// </summary>
-        /// <param name="id">Identifiant du produit à récupérer</param>
-        /// <returns>IQueryable de Produit</returns>
-        public IQueryable<Produit> GetByID(int id)
+        /// <param name="id">Identifiant du statut à récupérer</param>
+        /// <returns>IQueryable de Statut</returns>
+        public IQueryable<Statut> GetByID(int id)
         {
-            return _contexte.Produits.Where(p => p.Id == id);
+            return _contexte.Statuts.Where(p => p.Id == id);
         }
     }
 }

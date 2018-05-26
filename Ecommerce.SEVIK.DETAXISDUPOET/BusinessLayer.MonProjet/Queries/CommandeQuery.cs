@@ -8,40 +8,40 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.MonProjet.Queries
 {
-
     /// <summary>
-    /// QUERY pour récupérer des entités de types Produit
+    /// QUERY pour récupérer des entités de types Commande
     /// </summary>
-    public class ProduitQuery
+    class CommandeQuery
     {
+
         private readonly EcommerceContext _contexte;
 
         /// <summary>
         /// Constructeur
         /// </summary>
         /// <param name="contexte">Contexte EF à utiliser</param>
-        public ProduitQuery(EcommerceContext contexte)
+        public CommandeQuery(EcommerceContext contexte)
         {
             _contexte = contexte;
         }
 
         /// <summary>
-        /// Récupérer tous les produits
+        /// Récupérer toutes les commandes
         /// </summary>
-        /// <returns>IQueryable de Produit</returns>
-        public IQueryable<Produit> GetAll()
+        /// <returns>IQueryable de Commande</returns>
+        public IQueryable<Commande> GetAll()
         {
-            return _contexte.Produits;
+            return _contexte.Commandes;
         }
 
         /// <summary>
-        /// Récupérer un produit par son ID
+        /// Récupérer une commande par son ID
         /// </summary>
-        /// <param name="id">Identifiant du produit à récupérer</param>
-        /// <returns>IQueryable de Produit</returns>
-        public IQueryable<Produit> GetByID(int id)
+        /// <param name="id">Identifiant de la commande à récupérer</param>
+        /// <returns>IQueryable de Commande</returns>
+        public IQueryable<Commande> GetByID(int id)
         {
-            return _contexte.Produits.Where(p => p.Id == id);
+            return _contexte.Commandes.Where(p => p.Id == id);
         }
     }
 }
