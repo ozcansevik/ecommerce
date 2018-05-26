@@ -10,17 +10,19 @@ namespace Modele.MonProjet.Entities
     public class Client
     {
         [Key]
-        private int ID { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [MaxLength(50)]
-        private string Nom { get; set; }
+        public string Nom { get; set; }
 
         [Required]
         [MaxLength(50)]
-        private string Prenom { get; set; }
+        public string Prenom { get; set; }
 
-        private bool Actif { get; set; }
+        public bool Actif { get; set; }
 
+
+        public ICollection<Commande> Commandes { get; set; }
     }
 }

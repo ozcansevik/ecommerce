@@ -1,5 +1,6 @@
 ﻿using Modele.MonProjet.Entities;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.ModelConfiguration;
 
 namespace Modele.MonProjet.EntitiesFluent
 {
@@ -11,13 +12,13 @@ namespace Modele.MonProjet.EntitiesFluent
             HasKey(c => c.Id);
 
             Property(c => c.Id).HasColumnName("PRD_ID").IsRequired().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(c => c.Code).HasColumnName("PRD_CODE").IsRequired().HasMaxLength(50);
+            Property(c => c.Code).HasColumnName("PRD_CODE").IsRequired();
             Property(c => c.Libelle).HasColumnName("PRD_LIBELLE").IsRequired().HasMaxLength(50);
             Property(c => c.Description).HasColumnName("PRD_DESCRIPTION").HasMaxLength(50);
             Property(c => c.Actif).HasColumnName("PRD_ACTIF");
             Property(c => c.Stock).HasColumnName("PRD_STOCK").IsRequired();
-            Property(c => c.Prix).HasColumnName("PRD_PRIX");
-            Property(c => c.CategorieID).HasColumnName("PRD_CATEGORIEID").HasForeignKey(cc => cc.CategorieID);
+            Property(c => c.Prix).HasColumnName("PRD_PRIX").IsRequired();
+            HasRequired(cc => cc.Categorie).WithMany(c => c.Produits).HasForeignKey(c => c.CategorieId);
 
         }
     }

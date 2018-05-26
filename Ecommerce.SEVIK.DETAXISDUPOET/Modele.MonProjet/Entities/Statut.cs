@@ -10,9 +10,11 @@ namespace Modele.MonProjet.Entities
     public class Statut
     {
 
-        private int ID { get; set; }
+        public int Id { get; set; }
 
-        private string Libelle { get; set;  }
+        public string Libelle { get; set;  }
+
+        public ICollection<Commande> Commandes { get; set; }
 
     }
 }

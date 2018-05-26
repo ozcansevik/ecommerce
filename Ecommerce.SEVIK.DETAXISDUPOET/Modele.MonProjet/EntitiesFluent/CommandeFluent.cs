@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.ModelConfiguration;
 
 namespace Modele.MonProjet.EntitiesFluent
 {
@@ -16,8 +17,9 @@ namespace Modele.MonProjet.EntitiesFluent
             Property(c => c.Id).HasColumnName("CAT_ID").IsRequired().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(c => c.DateCommand).HasColumnName("CAT_DATE_COMMANDE").IsRequired();
             Property(c => c.Observation).HasColumnName("CAT_OBSERVATION").IsRequired().HasMaxLength(50);
-            Property(c => c.StatusID).HasColumnName("CAT_STATUS_ID").IsRequired().HasForeignKey(cc => cc.StatusID);
-            Property(c => c.ClientID).HasColumnName("CAT_CLIENT_ID").IsRequired().HasForeignKey(ss => ss.ClientID);
+
+            HasRequired(cc => cc.Statut).WithMany(c => c.Commandes).HasForeignKey(c => c.StatusId);
+            HasRequired(cc => cc.Client).WithMany(c => c.Commandes).HasForeignKey(c => c.ClientId);
 
         }
     }

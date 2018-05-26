@@ -10,13 +10,15 @@ namespace Modele.MonProjet.Entities
     public class Categorie
     {
         [Key]
-        private int ID { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [MaxLength(50)]
-        private string Libelle { get; set; }
+        public string Libelle { get; set; }
 
-        private bool Actif { get; set; }
+        public bool Actif { get; set; }
+
+        public ICollection<Produit> Produits { get; set; }
 
     }
 }

@@ -1,4 +1,6 @@
 ﻿using Modele.MonProjet.Entities;
+using System.Data.Entity.ModelConfiguration;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Modele.MonProjet.EntitiesFluent
@@ -14,6 +16,7 @@ namespace Modele.MonProjet.EntitiesFluent
             Property(c => c.Libelle).HasColumnName("CAT_NOM").IsRequired().HasMaxLength(50);
             Property(c => c.Actif).HasColumnName("CAT_ACTIF");
 
+            HasMany(c => c.Produits).WithRequired(cc => cc.Categorie).HasForeignKey(cc => cc.CategorieId);
         }
     }
 }

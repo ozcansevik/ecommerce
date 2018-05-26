@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,9 +48,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer.MonProjet\BusinessLayer.MonProjet.csproj">
+      <Project>{915f9481-e77e-4d4f-940d-5ab3ab76fdc1}</Project>
+      <Name>BusinessLayer.MonProjet</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClassLibrary1\ClassBib.csproj">
       <Project>{1afe0d00-48c1-446d-8825-af61ee8287cd}</Project>
       <Name>ClassBib</Name>
@@ -58,6 +60,9 @@
       <Project>{D99A0311-1740-4514-BADF-A48ACA491020}</Project>
       <Name>Modele.MonProjet</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
