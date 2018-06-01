@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassBib", "ClassLibrary1\ClassBib.csproj", "{1AFE0D00-48C1-446D-8825-AF61EE8287CD}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPWebApplication", "ASPWebApplication\ASPWebApplication.csproj", "{BDC4133F-24A9-41DA-9271-407BB5B0824A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPWebApplication.Tests", "ASPWebApplication.Tests\ASPWebApplication.Tests.csproj", "{9291C960-F8F0-4684-8E39-546F4DEDA2E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestModel", "TestModel\TestModel.csproj", "{BDE10CB0-64F7-473E-B43A-81E54AEFDA54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,14 @@ Global
 		{9291C960-F8F0-4684-8E39-546F4DEDA2E5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9291C960-F8F0-4684-8E39-546F4DEDA2E5}.Release|x86.ActiveCfg = Release|Any CPU
 		{9291C960-F8F0-4684-8E39-546F4DEDA2E5}.Release|x86.Build.0 = Release|Any CPU
+		{BDE10CB0-64F7-473E-B43A-81E54AEFDA54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDE10CB0-64F7-473E-B43A-81E54AEFDA54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDE10CB0-64F7-473E-B43A-81E54AEFDA54}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BDE10CB0-64F7-473E-B43A-81E54AEFDA54}.Debug|x86.Build.0 = Debug|Any CPU
+		{BDE10CB0-64F7-473E-B43A-81E54AEFDA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDE10CB0-64F7-473E-B43A-81E54AEFDA54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDE10CB0-64F7-473E-B43A-81E54AEFDA54}.Release|x86.ActiveCfg = Release|Any CPU
+		{BDE10CB0-64F7-473E-B43A-81E54AEFDA54}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -119,5 +129,9 @@ Global
 		{219EDD1F-4608-4BF3-95CE-97B76EADD13F} = {4CEA1AFD-BEB9-4167-9317-F09665DD3434}
 		{BDC4133F-24A9-41DA-9271-407BB5B0824A} = {4CEA1AFD-BEB9-4167-9317-F09665DD3434}
 		{9291C960-F8F0-4684-8E39-546F4DEDA2E5} = {4CEA1AFD-BEB9-4167-9317-F09665DD3434}
+		{BDE10CB0-64F7-473E-B43A-81E54AEFDA54} = {4CEA1AFD-BEB9-4167-9317-F09665DD3434}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E15EE7C1-2237-4291-8350-ECB32A169FDE}
 	EndGlobalSection
 EndGlobal

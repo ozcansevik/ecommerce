@@ -49,6 +49,16 @@ namespace BusinessLayer.MonProjet
         }
 
         /// <summary>
+        /// Récupérer une produit en base
+        /// </summary>
+        /// <returns>Produit</returns>
+        public Produit GetProduit(int id)
+        {
+            ProduitQuery pq = new ProduitQuery(contexte);
+            return pq.GetByID(id).First();
+        }
+
+        /// <summary>
         /// Ajouter un produit en base
         /// </summary>
         /// <param name="p">Produit à ajouter</param>
