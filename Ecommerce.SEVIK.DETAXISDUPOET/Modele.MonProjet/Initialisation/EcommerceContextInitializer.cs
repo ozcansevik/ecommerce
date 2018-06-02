@@ -26,7 +26,7 @@ namespace Modele.MonProjet.Initialisation
 
             Categorie c = defaultCategories.First();
 
-            defaultProducts.Add(new Produit { Code = 404, Libelle = "Balasssncoire", Description = "La boucave", Stock = 1000, Prix = 2000, Categorie = c});
+            defaultProducts.Add(new Produit { Code = 404, Libelle = "Balasssncoire", Description = "La boucave", Stock = 1000, Prix = 2000, CategorieId = c.Id,  Categorie = c});
 
 
             foreach (Categorie categ in defaultCategories)

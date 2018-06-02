@@ -3,6 +3,8 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+*.config
+
 # User-specific files
 *.suo
 *.user
@@ -243,9 +245,9 @@ ServiceFabricBackup/
 *.rptproj.bak
 
 # SQL Server files
-*.mdf
-*.ldf
-*.ndf
+# *.mdf
+# *.ldf
+# *.ndf
 
 # Business Intelligence projects
 *.rdl.data

@@ -18,6 +18,8 @@ namespace Modele.MonProjet.EntitiesFluent
             Property(c => c.Actif).HasColumnName("PRD_ACTIF");
             Property(c => c.Stock).HasColumnName("PRD_STOCK").IsRequired();
             Property(c => c.Prix).HasColumnName("PRD_PRIX").IsRequired();
+            Property(c => c.CategorieId).HasColumnName("PRD_CATID").IsRequired();
+
             HasRequired(cc => cc.Categorie).WithMany(c => c.Produits).HasForeignKey(c => c.CategorieId);
 
         }

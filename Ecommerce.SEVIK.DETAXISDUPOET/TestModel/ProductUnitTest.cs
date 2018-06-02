@@ -20,7 +20,7 @@ namespace TestModel
         {
             blm = BusinessLayerManager.Instance;
             c = blm.GetAllCategorie().First();
-            prd = new Produit() { Code = 404, Libelle = "Balancoire", Description = "La boucave", Stock = 1000, Prix = 2000, Categorie = c };
+            prd = new Produit() { Code = 404, Libelle = "Balancoire", Description = "La boucave", Stock = 1000, Prix = 2000, CategorieId = c.Id, Categorie = c };
             id = blm.AjouterProduit(prd);
 
         }
