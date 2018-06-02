@@ -27,16 +27,24 @@ namespace WCFService
             return p.Stock;
         }
 
-        List<Commande> IServiceECommerce.GetCommandeData()
+        public List<Commande> GetCommandeData()
         {
             List<Commande> commandes = blm.GetAllCommande();
             return commandes;
         }
 
-        List<Produit> IServiceECommerce.GetProduitData()
+        public List<ProduitContract> GetProduitData()
         {
             List<Produit> produits = blm.GetAllProduit();
-            return produits;
+            List<ProduitContract> produitsC = new List<ProduitContract>();
+
+            foreach(Produit p in produits)
+            {
+                ProduitContract pC = new ProduitContract(p.Id, p.Code, p.Libelle, p.Description, p.Stock, p.Prix, p.CategorieId, p.Actif);
+                produitsC.Add(pC);
+            }
+
+            return produitsC;
         }
     }
 }

@@ -11,9 +11,6 @@ namespace Modele.Console.Ecommerce
         {
             BusinessLayerManager blm = BusinessLayerManager.Instance;
 
-            Produit p = new Produit();
-            blm.AjouterProduit(p);
-
             List<Categorie> categories = blm.GetAllCategorie();
             System.Console.WriteLine("LISTE DES CATEGORIES");
             System.Console.WriteLine("{0}", categories.Count);
