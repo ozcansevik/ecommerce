@@ -106,5 +106,19 @@ namespace BusinessLayer.MonProjet
         }
 
         #endregion
+
+        #region Commande
+
+        /// <summary>
+        /// Récupérer une liste de commandes en base
+        /// </summary>
+        /// <returns>Liste de Categorie</returns>
+        public List<Commande> GetAllCommande()
+        {
+            CommandeQuery cq = new CommandeQuery(contexte);
+            return cq.GetAll().ToList();
+        }
+
+        #endregion
     }
 }
