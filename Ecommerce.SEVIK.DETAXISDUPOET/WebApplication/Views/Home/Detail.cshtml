@@ -1,0 +1,32 @@
+﻿@model Modele.MonProjet.Entities.Produit
+@{
+    ViewBag.Title = "Detail";
+}
+
+<div class="detail_div">
+    @if (Model != null)
+    {
+        <div style="text-align: center;">
+            ID : @Model.Id
+        </div>
+
+        <div class="data_div">
+            <div class="detail_flex_div">
+                <div>Code</div>  <div>@Model.Code</div>
+            </div>
+            <div  class="detail_flex_div">
+                <div>Description</div>   <div>@Model.Description</div>
+            </div>
+            <div class="detail_flex_div">
+                <div>Libelle</div>  <div>@Model.Libelle</div>
+            </div>
+            <div class="detail_flex_div">
+                <div>Prix</div>  <div>@Model.Prix EUR</div>
+            </div>
+            <div class="detail_flex_div">
+                <div>Stock</div>  <div>@Model.Stock</div>
+            </div>
+        </div>
+    }
+
+</div>

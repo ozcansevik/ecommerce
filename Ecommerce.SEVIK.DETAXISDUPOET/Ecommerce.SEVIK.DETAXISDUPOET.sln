@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestModel", "TestModel\Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterDetailProduct", "MasterDetailProduct\MasterDetailProduct.csproj", "{CB1731A9-8FFE-480C-8554-DFCF959E53E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{1CEA2579-CDDB-4E44-85F1-8F2278A1D830}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +127,14 @@ Global
 		{CB1731A9-8FFE-480C-8554-DFCF959E53E6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CB1731A9-8FFE-480C-8554-DFCF959E53E6}.Release|x86.ActiveCfg = Release|Any CPU
 		{CB1731A9-8FFE-480C-8554-DFCF959E53E6}.Release|x86.Build.0 = Release|Any CPU
+		{1CEA2579-CDDB-4E44-85F1-8F2278A1D830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CEA2579-CDDB-4E44-85F1-8F2278A1D830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CEA2579-CDDB-4E44-85F1-8F2278A1D830}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1CEA2579-CDDB-4E44-85F1-8F2278A1D830}.Debug|x86.Build.0 = Debug|Any CPU
+		{1CEA2579-CDDB-4E44-85F1-8F2278A1D830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CEA2579-CDDB-4E44-85F1-8F2278A1D830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CEA2579-CDDB-4E44-85F1-8F2278A1D830}.Release|x86.ActiveCfg = Release|Any CPU
+		{1CEA2579-CDDB-4E44-85F1-8F2278A1D830}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

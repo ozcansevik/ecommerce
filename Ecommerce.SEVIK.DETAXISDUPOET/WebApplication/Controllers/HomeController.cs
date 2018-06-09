@@ -3,28 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BusinessLayer.MonProjet;
+using Modele.MonProjet.Entities;
+using WebApplication.Models.ViewModel;
 
 namespace WebApplication.Controllers
 {
     public class HomeController : Controller
     {
+        
         public ActionResult Index()
         {
-            return View();
+            ProduitViewModel produitViewModel = new ProduitViewModel();
+            return View(produitViewModel);
         }
 
-        public ActionResult About()
+        public ActionResult Detail(int id)
         {
-            ViewBag.Message = "Your application description page.";
+            BusinessLayerManager blm = BusinessLayerManager.Instance;
 
-            return View();
+            Produit p = blm.GetProduit(id);
+
+            return View(p);
         }
 
-        public ActionResult Contact()
+        public ActionResult Add()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
+
+        public ActionResult AddSumbit()
+        {
+            /*BusinessLayerManager blm = BusinessLayerManager.Instance;
+
+            Produit p = blm.GetProduit(id);*/
+
+            return View("Index");
+        }
+
     }
 }

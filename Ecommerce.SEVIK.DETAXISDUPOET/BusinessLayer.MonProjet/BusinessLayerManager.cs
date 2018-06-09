@@ -55,7 +55,15 @@ namespace BusinessLayer.MonProjet
         public Produit GetProduit(int id)
         {
             ProduitQuery pq = new ProduitQuery(contexte);
-            return pq.GetByID(id).First();
+            Produit p;
+            try
+            {
+                p = pq.GetByID(id).First();
+            } catch(Exception e)
+            {
+                p = null;
+            }
+            return p;
         }
 
         /// <summary>
