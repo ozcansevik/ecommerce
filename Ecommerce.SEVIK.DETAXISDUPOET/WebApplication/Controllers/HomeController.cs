@@ -32,14 +32,5 @@ namespace WebApplication.Controllers
             return View();
         }
 
-        public ActionResult AddSumbit()
-        {
-            /*BusinessLayerManager blm = BusinessLayerManager.Instance;
-
-            Produit p = blm.GetProduit(id);*/
-
-            return View("Index");
-        }
-
     }
 }

@@ -1,35 +1,51 @@
-﻿@{
+﻿@model WebApplication.Models.ViewModel.AddProduitViewModel
+@{
     ViewBag.Title = "Add";
 }
 
 <div class="add_div">
 
-    <form action="/home/AddSubmit" method="post">
+    @using (Html.BeginForm("HandleForm", "Add"))
+    {
+
         <div class="form-group">
-            <label for="code">Code</label>
-            <input type="text" class="form-control input" id="code" placeholder="Code">
+            @Html.LabelFor(p => p.produit.Code)
+            <div>@Html.TextBoxFor(p => p.produit.Code, new { @class = "form-control" })</div>
         </div>
         <div class="form-group">
-            <label for="description">Description</label>
-            <input type="text" class="form-control input" id="description" placeholder="Description">
+            @Html.LabelFor(p => p.produit.Description)
+            <div>
+                @Html.TextBoxFor(p => p.produit.Description, new { @class = "form-control" })
+            </div>
         </div>
         <div class="form-group">
-            <label for="libelle">Libelle</label>
-            <input type="text" class="form-control input" id="libelle" placeholder="Libelle">
+            @Html.LabelFor(p => p.produit.Libelle)
+            <div>
+                @Html.TextBoxFor(p => p.produit.Libelle, new { @class = "form-control" })
+            </div>
         </div>
         <div class="form-group">
-            <label for="prix">Prix</label>
-            <input type="number" min="1" step="1" class="form-control input" id="prix" placeholder="Prix">
+            @Html.LabelFor(p => p.produit.Prix)
+            <div>
+                @Html.TextBoxFor(p => p.produit.Prix, new { @class = "form-control" })
+            </div>
         </div>
-        <div class="form-group">
-            <label for="stock">Stock</label>
-            <input type="number" min="1" step="1" class="form-control input" id="stock" placeholder="Stock">
+        <div>
+            @Html.LabelFor(p => p.produit.Stock)
+            <div>
+                @Html.TextBoxFor(p => p.produit.Stock, new { @class = "form-control" })
+            </div>
         </div>
         <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="actif">
-            <label class="form-check-label input" for="actif">Actif</label>
+            @Html.DropDownListFor(p => p.produit.Categorie, p.categories)
+        </div>
+        <div class="form-group form-check">
+                @Html.LabelFor(p => p.produit.Actif)
+                <div>
+                    @Html.CheckBoxFor(p => p.produit.Actif, new { @class = "form-check-input" })
+                </div>
         </div>
         <button type="submit" class="btn btn-primary">Ajouter</button>
-    </form>
+    }
 
 </div>
