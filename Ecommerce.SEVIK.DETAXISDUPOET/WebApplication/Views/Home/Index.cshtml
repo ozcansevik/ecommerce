@@ -3,32 +3,75 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="row body_produits">
+<div class="row body_home">
 
-    <div style="display: flex; justify-content: space-between;padding: 0 15px;">
-        <div>Id</div>
-        <div>Code</div>
-        <div>Description</div>
-        <div>Libelle</div>
-        <div>Prix</div>
-        <div>Stock</div>
+    <div class="custom_card">
+        <h3>Commandes</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Observation</th>
+                    <th scope="col">Statut</th>
+                    <th scope="col">DateCommand</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var c in Model.Commandes)
+                {
+                    <tr>
+                        <td> <a href="/Home/Detail/@c.Id"> @c.Id </td>
+                        <td> <a href="/Home/Detail/@c.Id"> @c.Observation</td>
+                        <td> <a href="/Home/Detail/@c.Id"> @c.Statut</td>
+                        <td> <a href="/Home/Detail/@c.Id"> @c.DateCommand</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
     </div>
 
-    <div class="list-group">
+    <div class="custom_card">
+        <h3>Produits</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Code</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Libelle</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">Stock</th>
+                </tr>
+            </thead>
 
-        @foreach (var p in Model.Produits)
-        {
-            <a href="/Home/Detail/@p.Id" class="list-group-item list-group-item-action item_product">
-                <div style="display: flex; justify-content: space-between;">
-                    <div>@p.Id</div>
-                    <div>@p.Code</div>
-                    <div>@p.Description</div>
-                    <div>@p.Libelle</div>
-                    <div>@p.Prix</div>
-                    <div>@p.Stock</div>
-                </div>
-            </a>
+            <tbody>
 
-        }
+                @foreach (var p in Model.Produits)
+                {
+                <tr id="products" class="tr_table">
+                    <td> <a href="/Home/Detail/@p.Id"> @p.Id </td>
+                    <td> <a href="/Home/Detail/@p.Id">@p.Code</td>
+                    <td> <a href="/Home/Detail/@p.Id"> @p.Description</td>
+                    <td> <a href="/Home/Detail/@p.Id">@p.Libelle</td>
+                    <td> <a href="/Home/Detail/@p.Id">@p.Prix</td>
+                    <td> <a href="/Home/Detail/@p.Id">@p.Stock</td>
+                    <td id="buttons" class="action_button_td">
+                        <button onclick="location.href='@Url.Action("Delete", "Home")'" type="button" class="btn btn-danger action_button">Delete</button>
+                        <button onclick="location.href='@Url.Action("Edit", "Home", new { id = @p.Id })'" type="button" class="btn btn-success action_button">Edit</button>
+                    </td>
+                </tr>
+                }
+
+            </tbody>
+        </table>
     </div>
-</div>
+
+
+    </div>
+
+    <script type="text/javascript">
+
+    </script>

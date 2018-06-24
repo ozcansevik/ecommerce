@@ -48,12 +48,47 @@ textarea {
     padding: 5%;
 }
 
+.body_home {
+    padding: 5%;
+    //display: flex;
+    //flex-direction: row;
+}
+
+.custom_card {
+    //width: 20vw;
+    //height: 10vh;
+    padding: 2%;
+    box-shadow: 0 0.3125rem 1rem 0 rgba(0,0,0,0.24);
+    margin: 2%;
+}
+
+h3 {
+    margin-top: 5px;
+}
+
 .navbar-nav {
    float: right!important;
 }
 
-/* DETAIL */
+a:visited{
+    color: black;
+}
 
+.action_button {
+    float: right;
+    margin: 0 1%;
+}
+
+action_button_td{
+    width: 40%;
+}
+
+td {
+    vertical-align: middle!important;
+    width: 10%;
+}
+
+/* DETAIL */
 .detail_div {
     padding: 2.4% 6%;
     background-image: url(grid.jpg);
@@ -98,11 +133,3 @@ textarea {
 }
 
 
-/* FORM ADD */
-
-.input_form {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    padding: 5px;
-}

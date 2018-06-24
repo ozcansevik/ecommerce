@@ -11,11 +11,14 @@ namespace WebApplication.Models.ViewModel
     {
         public List<Produit> Produits { get; set; }
 
+        public List<Commande> Commandes { get; set; }
+
         public BusinessLayerManager blm = BusinessLayerManager.Instance;
 
         public ProduitViewModel()
         {
             this.Produits = blm.GetAllProduit();
+            this.Commandes = blm.GetAllCommande();
         }
 
     }

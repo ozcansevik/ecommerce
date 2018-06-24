@@ -1,0 +1,38 @@
+﻿@model WebApplication.Models.ViewModel.ProduitViewModel
+@{
+    ViewBag.Title = "Products List";
+}
+
+<div class="row body_produits">
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Code</th>
+                <th scope="col">Description</th>
+                <th scope="col">Libelle</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Stock</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var p in Model.Produits)
+            {
+                <tr>
+                    <td> <a href="/Home/Detail/@p.Id"> @p.Id </td>
+                    <td> <a href="/Home/Detail/@p.Id"> @p.Code</td>
+                    <td> <a href="/Home/Detail/@p.Id"> @p.Description</td>
+                    <td> <a href="/Home/Detail/@p.Id"> @p.Libelle</td>
+                    <td> <a href="/Home/Detail/@p.Id"> @p.Prix</td>
+                    <td> <a href="/Home/Detail/@p.Id"> @p.Stock</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+
+</div>

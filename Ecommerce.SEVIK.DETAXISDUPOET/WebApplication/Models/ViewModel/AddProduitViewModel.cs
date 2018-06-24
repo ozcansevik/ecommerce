@@ -15,9 +15,19 @@ namespace WebApplication.Models.ViewModel
 
         public BusinessLayerManager blm = BusinessLayerManager.Instance;
 
+        public Boolean edition;
+
         public AddProduitViewModel()
         {
             this.categories = blm.GetAllCategorie();
+            this.edition = false;
+        }
+
+        public AddProduitViewModel(Produit p)
+        {
+            this.produit = p;
+            this.categories = blm.GetAllCategorie();
+            this.edition = true;
         }
 
     }

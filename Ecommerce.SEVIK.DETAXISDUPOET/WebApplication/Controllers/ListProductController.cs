@@ -9,8 +9,9 @@ using WebApplication.Models.ViewModel;
 
 namespace WebApplication.Controllers
 {
-    public class HomeController : Controller
+    public class ListProductController : Controller
     {
+        
         public ActionResult Index()
         {
             ProduitViewModel produitViewModel = new ProduitViewModel();
@@ -32,19 +33,5 @@ namespace WebApplication.Controllers
             return View(addproduitViewModel);
         }
 
-        public ActionResult Edit(int id)
-        {
-            BusinessLayerManager blm = BusinessLayerManager.Instance;
-            Produit pToEdit = blm.GetProduit(id);
-
-            AddProduitViewModel addproduitViewModel = new AddProduitViewModel(pToEdit);
-            return View("Add", addproduitViewModel);
-        }
-
-        public ActionResult Delete()
-        {
-            AddProduitViewModel addproduitViewModel = new AddProduitViewModel();
-            return View(addproduitViewModel);
-        }
     }
 }

@@ -12,13 +12,19 @@ namespace WebApplication.Controllers
     public class AddController : Controller
     {
         [HttpPost]
-        public ActionResult HandleForm(Produit p)
+        public ActionResult HandleForm(AddProduitViewModel p)
         {
             BusinessLayerManager blm = BusinessLayerManager.Instance;
 
-            blm.AjouterProduit(p);
-
-            return View("Index");
+            if (p.edition)
+            {
+                blm.ModifierProduit(p.produit);
+            } else
+            {
+                blm.AjouterProduit(p.produit);
+            }
+                     
+            return RedirectToAction("Index", "Home");
         }
 
     }
