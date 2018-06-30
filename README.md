@@ -3,7 +3,7 @@
 ## Database 
 #### Dans le dossier ClassLibrary1
 
-## Model entities
+## Model Entities
 #### Dans le dossier Modele.MonProjet
 
 ## BLL

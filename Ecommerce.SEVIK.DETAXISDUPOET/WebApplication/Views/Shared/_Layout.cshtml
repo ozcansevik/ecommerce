@@ -21,9 +21,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li style="display: flex; align-items: center;">
+                    <li class="li_navbar">
 
-                        <input style="width: 15vw; height: 4vh;" type="text" name="search" id="search" value="" />
+                        <input placeholder="Recherchez quelque chose" class="input_search" type="text" name="search" id="search" value="" />
                         @Html.ActionLink("Search", "Search", "Home", new { search = "xxx" }, new { @class = "link" })
 
                         <script>
@@ -45,7 +45,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - BY SEVIK & DE TAXIS</p>
         </footer>
     </div>
 

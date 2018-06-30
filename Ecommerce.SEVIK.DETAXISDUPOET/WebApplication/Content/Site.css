@@ -1,178 +1,210 @@
-﻿@font-face {
-    font-family: Lobster;
-    src: url(../fonts/Lobster-Regular.ttf);
-}
+﻿/* FONTS */
 
-@font-face {
-    font-family: Alegreya;
-    src: url(../fonts/Alegreya-Regular.ttf);
-}
+    @font-face {
+        font-family: Lobster;
+        src: url(../fonts/Lobster-Regular.ttf);
+    }
 
-.navbar-fixed-top {
-    padding: 10px 5px;
-}
+    @font-face {
+        font-family: Alegreya;
+        src: url(../fonts/Alegreya-Regular.ttf);
+    }
 
-.navbar-inverse .navbar-brand {
-    color: white;
-    font-size: 25px;
-}
+/* END FONTS */
 
-.navbar-inverse .navbar-brand:hover{
-    color:#9d9d9d;
-}
+/*---------------------------------------------------------------------*/
 
-.navbar-inverse .navbar-nav > li > a {
-    color: white;
-}
+/* GENERAL */
 
-.navbar-nav{
-    font-size: 16px;
-}
+    body {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
 
-.navbar-inverse .navbar-nav > li > a:hover {
-    color: #9d9d9d;
-}
+    /* Set padding to keep content from hitting the edges */
+    .body-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
-.search_logo {
-    width: 35px;
-    margin: 0 8px;
-}
+    /* Override the default bootstrap behavior where horizontal description lists 
+       will truncate terms that are too long to fit in the left column 
+    */
+    .dl-horizontal dt {
+        white-space: normal;
+    }
 
-.logo_title {
-    font-family: Lobster;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-}
+    /* Set width on the form input elements since they're 100% wide by default */
+    input,
+    select,
+    textarea {
+        max-width: 280px;
+    }
 
-.logo {
-    width: 25vw;
-}
+    .body_produits {
+        padding: 5%;
+    }
 
-.link {
-    background-repeat: no-repeat;
-    width: 50px;
-    height: 50px;
-    margin: 0 8px;
-    background: url(search.png);
-    text-indent: -9999px; /* hides the link text */
-}
+    .body_home {
+        padding: 5%;
+    }
 
-.link:hover{
-    opacity: 0.8;
-}
+    .navbar-nav {
+        float: right !important;
+    }
 
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
+    .li_navbar {
+        display: flex!important;
+        align-items: center;
+    }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
+    .input_search {
+        width: 15vw;
+        height: 4vh;
+        padding: 4px;
+    }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
-}
+/* END GENERAL*/
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
+/*---------------------------------------------------------------------*/
 
-.body_produits{
-    padding: 5%;
-}
+/* HOME PAGE*/
 
-.body_home {
-    padding: 5%;
-    //display: flex;
-    //flex-direction: row;
-}
+    .navbar-fixed-top {
+        padding: 10px 5px;
+    }
 
-.custom_card {
-    //width: 20vw;
-    //height: 10vh;
-    padding: 2%;
-    box-shadow: 0 0.3125rem 1rem 0 rgba(0,0,0,0.24);
-    margin: 2%;
-}
+    .navbar-inverse .navbar-brand {
+        color: white;
+        font-size: 25px;
+    }
 
-h3 {
-    margin-top: 5px;
-}
+    .navbar-inverse .navbar-brand:hover{
+        color:#9d9d9d;
+    }
 
-.navbar-nav {
-   float: right!important;
-}
+    .navbar-inverse .navbar-nav > li > a {
+        color: white;
+    }
 
-a, a:visited{
-    color: black;
-}
+    .navbar-nav{
+        font-size: 16px;
+    }
 
-.action_button {
-    float: right;
-    margin: 0 1%;
-}
+    .navbar-inverse .navbar-nav > li > a:hover {
+        color: #9d9d9d;
+    }
 
-.action_button_td{
-    width: 15%;
-}
+    .search_logo {
+        width: 35px;
+        margin: 0 8px;
+    }
 
-td {
-    vertical-align: middle!important;
-    width: 10%;
-}
+    .logo_title {
+        font-family: Lobster;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        width: 25vw;
+    }
+
+    .link {
+        background-repeat: no-repeat;
+        width: 50px;
+        height: 50px;
+        margin: 0 8px;
+        background: url(search.png);
+        text-indent: -9999px; /* hides the link text */
+    }
+
+    .link:hover{
+        opacity: 0.8;
+    }
+
+    .custom_card {
+        padding: 2%;
+        box-shadow: 0 0.3125rem 1rem 0 rgba(0,0,0,0.24);
+        margin: 2%;
+    }
+
+    h3 {
+        margin-top: 5px;
+    }
+
+    a, a:visited{
+        color: black;
+    }
+
+    .action_button {
+        float: right;
+        margin: 0 1%;
+    }
+
+    .action_button_td{
+        width: 15%;
+    }
+
+    td {
+        vertical-align: middle!important;
+        width: 10%;
+    }
+
+/* END HOME PAGE*/
+
+/*---------------------------------------------------------------------*/
 
 /* DETAIL */
-.detail_div {
-    padding: 2.4% 6%;
-    background-image: url(grid.jpg);
-    height: 100vh;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
-    margin: 7% 26%;
-    background-size: 36%;
-    font-size: 2.8rem;
-    font-family: Alegreya;
-    font-weight: bold;
-}
 
-.item_product:active {
-    color: #337ab7;
-    background-color: #fff;
-}
+    .detail_div {
+        padding: 2.4% 6%;
+        background-image: url(grid.jpg);
+        height: 100vh;
+        box-shadow: 0 0.3125rem 1rem 0 rgba(0,0,0,0.24);
+        margin: 7% 26%;
+        background-size: 36%;
+        font-size: 2.8rem;
+        font-family: Alegreya;
+        font-weight: bold;
+    }
 
-.data_div {
-    font-size: 2rem;
-}
+    .item_product:active {
+        color: #337ab7;
+        background-color: #fff;
+    }
 
-.detail_flex_div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 30vw;
-}
+    .data_div {
+        font-size: 2rem;
+    }
+
+    .detail_flex_div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 30vw;
+    }
+
+/* END DETAIL */
+
+/*---------------------------------------------------------------------*/
 
 /* ADD */
 
-.add_div {
-    padding: 2.4% 6%;
-    height: 100vh;
-    box-shadow: 1px 3px 2px 0 rgba(0,0,0,0.14), 7px 3px 2px -1px rgba(0,0,0,0.12), 0 1px 5px 1px rgba(0,0,0,0.2);
-    margin: 7% 26%;
-    font-size: 1.8rem;
-    font-weight: bold;
-}
+    .add_div {
+        padding: 2.4% 6%;
+        height: 100vh;
+        box-shadow: 0 0.3125rem 1rem 0 rgba(0,0,0,0.24);
+        margin: 7% 26%;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
 
-.input {
-    max-width: 100%;
-}
+    .input {
+        max-width: 100%;
+    }
+
+/* END ADD */
 
 
