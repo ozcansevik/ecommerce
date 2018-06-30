@@ -61,8 +61,18 @@
     .input_search {
         width: 15vw;
         height: 4vh;
-        padding: 4px;
+        padding: 20px 4px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid white;
+        color: white;
     }
+    
+
+        .input_search:focus {
+            border: none !important;
+            border-bottom: 2px solid darkblue !important;
+        }
 
 /* END GENERAL*/
 
@@ -118,6 +128,9 @@
         margin: 0 8px;
         background: url(search.png);
         text-indent: -9999px; /* hides the link text */
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: 0 10px;
     }
 
     .link:hover{
