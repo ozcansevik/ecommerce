@@ -16,14 +16,15 @@
 #### Dans le dossier MasterDetailProduct
 
 ## Application ASP.NET MVC
-#### Dans le dossier WebApplication
+
+##### Dans le dossier WebApplication
 
 ### Fonctionnalités
 
-#### Consultation des Commandes et de Produits de façon rapide (page d'acceuil)
-#### Recherche de Produits et de Commandes
-#### Consultation de la liste des Produits uniquement
-#### Edition et suppression de Produits
-#### Ajout de produit
-#### Consultation en détail d'un Produit
+⋅⋅* Consultation des Commandes et de Produits de façon rapide (page d'acceuil)
+⋅⋅* Recherche de Produits et de Commandes
+⋅⋅* Consultation de la liste des Produits uniquement
+⋅⋅* Edition et suppression de Produits
+⋅⋅* Ajout de produit
+⋅⋅* Consultation en détail d'un Produit
 
