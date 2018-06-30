@@ -25,6 +25,10 @@
     color: white;
 }
 
+.navbar-nav{
+    font-size: 16px;
+}
+
 .navbar-inverse .navbar-nav > li > a:hover {
     color: #9d9d9d;
 }
@@ -52,6 +56,10 @@
     margin: 0 8px;
     background: url(search.png);
     text-indent: -9999px; /* hides the link text */
+}
+
+.link:hover{
+    opacity: 0.8;
 }
 
 body {

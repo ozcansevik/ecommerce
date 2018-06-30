@@ -19,15 +19,24 @@ namespace Modele.MonProjet.Initialisation
         {
             IList<Categorie> defaultCategories = new List<Categorie>();
             IList<Produit> defaultProducts = new List<Produit>();
+            IList<Commande> defaultCommandes = new List<Commande>();
 
             defaultCategories.Add(new Categorie() { Libelle = "Charcuterie" });
             defaultCategories.Add(new Categorie() { Libelle = "Produits laitiers" });
             defaultCategories.Add(new Categorie() { Libelle = "Liquides" });
+            defaultCategories.Add(new Categorie() { Libelle = "Vehicules" });
 
             Categorie c = defaultCategories.First();
 
-            defaultProducts.Add(new Produit { Code = 404, Libelle = "Balasssncoire", Description = "La boucave", Stock = 1000, Prix = 2000, CategorieId = c.Id,  Categorie = c});
+            Categorie cVoiture = defaultCategories.Last();
 
+            defaultProducts.Add(new Produit { Code = 404, Libelle = "Balasssncoire", Description = "La boucave", Stock = 1000, Prix = 2000, CategorieId = c.Id,  Categorie = c});
+            defaultProducts.Add(new Produit { Code = 405, Libelle = "Voiture", Description = "BMW", Stock = 100, Prix = 20000, CategorieId = cVoiture.Id, Categorie = cVoiture });
+
+            Client client = new Client { Nom = "Sevik", Prenom = "Ozcan", Actif = true };
+            Statut s = new Statut { Libelle = "En Cours" };
+
+            defaultCommandes.Add(new Commande { DateCommand = DateTime.Now, Client = client, ClientId = client.Id, Observation = "Première Commande", Statut = s, StatusId = s.Id });
 
             foreach (Categorie categ in defaultCategories)
             {
@@ -42,7 +51,10 @@ namespace Modele.MonProjet.Initialisation
                 context.SaveChanges();
             }
 
-
+            foreach (Commande commande in defaultCommandes) {
+                context.Commandes.Add(commande);
+                context.SaveChanges();
+            }
 
             base.Seed(context);
         }

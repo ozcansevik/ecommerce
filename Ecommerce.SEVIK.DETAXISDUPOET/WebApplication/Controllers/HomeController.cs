@@ -53,5 +53,15 @@ namespace WebApplication.Controllers
             ProduitViewModel produitViewModel = new ProduitViewModel(search);
             return View(produitViewModel);
         }
+
+
+        public ActionResult DetailCommande(int id) 
+        {
+            BusinessLayerManager blm = BusinessLayerManager.Instance;
+
+            Commande c = blm.GetAllCommande().Find(commande=> commande.Id == id);
+
+            return View(c);
+        }
     }
 }

@@ -14,6 +14,7 @@
                     <th scope="col">Observation</th>
                     <th scope="col">Statut</th>
                     <th scope="col">DateCommand</th>
+                    <th scope="col">Client</th>
                 </tr>
             </thead>
 
@@ -21,12 +22,13 @@
 
                 @foreach (var c in Model.Commandes)
                 {
-                    <tr>
-                        <td> <a href="/Home/Detail/@c.Id"> @c.Id </td>
-                        <td> <a href="/Home/Detail/@c.Id"> @c.Observation</td>
-                        <td> <a href="/Home/Detail/@c.Id"> @c.Statut</td>
-                        <td> <a href="/Home/Detail/@c.Id"> @c.DateCommand</td>
-                    </tr>
+                <tr>
+                    <td> <a href="/Home/DetailCommande/@c.Id"> @c.Id </td>
+                    <td> <a href="/Home/DetailCommande/@c.Id"> @c.Observation</td>
+                    <td> <a href="/Home/DetailCommande/@c.Id"> @c.Statut</td>
+                    <td> <a href="/Home/DetailCommande/@c.Id"> @c.DateCommand</td>
+                    <td> <a href="/Home/DetailCommande/@c.Id"> @c.Client</td>
+                </tr>
                 }
 
             </tbody>

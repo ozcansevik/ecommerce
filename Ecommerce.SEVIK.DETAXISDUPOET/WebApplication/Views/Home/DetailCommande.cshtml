@@ -1,0 +1,29 @@
+﻿@model Modele.MonProjet.Entities.Commande
+@{
+    ViewBag.Title = "Detail Commande";
+}
+
+<div class="detail_div">
+    @if (Model != null)
+    {
+        <div style="text-align: center;">
+            ID : @Model.Id
+        </div>
+
+        <div class="data_div">
+            <div class="detail_flex_div">
+                <div>Date</div>  <div>@Model.DateCommand</div>
+            </div>
+            <div  class="detail_flex_div">
+                <div>Observation</div>   <div>@Model.Observation</div>
+            </div>
+            <div class="detail_flex_div">
+                <div>Statut</div>  <div>@Model.Statut</div>
+            </div>
+            <div class="detail_flex_div">
+                <div>Client</div>  <div>@Model.Client</div>
+            </div>
+        </div>
+    }
+
+</div>
