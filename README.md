@@ -21,7 +21,7 @@
 
 ### Fonctionnalités
 
-* Consultation des Commandes et de Produits de façon rapide (page d'acceuil)
+* Consultation des Commandes et de Produits de façon rapide (page d'accueil)
 * Recherche de Produits et de Commandes
 * Consultation de la liste des Produits uniquement
 * Edition et suppression de Produits
