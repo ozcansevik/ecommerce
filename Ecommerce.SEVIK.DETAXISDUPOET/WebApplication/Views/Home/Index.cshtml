@@ -44,6 +44,7 @@
                     <th scope="col">Libelle</th>
                     <th scope="col">Prix</th>
                     <th scope="col">Stock</th>
+                    <th scope="col">Actif</th>
                 </tr>
             </thead>
 
@@ -58,6 +59,7 @@
                     <td> <a href="/Home/Detail/@p.Id">@p.Libelle</td>
                     <td> <a href="/Home/Detail/@p.Id">@p.Prix</td>
                     <td> <a href="/Home/Detail/@p.Id">@p.Stock</td>
+                    <td> <a href="/Home/Detail/@p.Id">@p.Actif</td>
                     <td id="buttons" class="action_button_td">
                         <button onclick="location.href='@Url.Action("Delete", "Home")'" type="button" class="btn btn-danger action_button">Delete</button>
                         <button onclick="location.href='@Url.Action("Edit", "Home", new { id = @p.Id })'" type="button" class="btn btn-success action_button">Edit</button>

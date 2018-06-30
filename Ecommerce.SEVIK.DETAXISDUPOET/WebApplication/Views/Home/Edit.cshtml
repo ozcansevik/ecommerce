@@ -1,0 +1,63 @@
+﻿@model WebApplication.Models.ViewModel.AddProduitViewModel
+@{
+    ViewBag.Title = "Edit";
+    List<SelectListItem> items = new List<SelectListItem>();
+    foreach (var categorie in Model.categories)
+    {
+        items.Add(new SelectListItem { Value = categorie.Id.ToString(), Text = categorie.Libelle });
+    }
+}
+
+<div class="add_div">
+
+    @using (Html.BeginForm("HandleForm", "Edit"))
+    {
+        <div style="display: none;" class="form-group">
+            @Html.LabelFor(p => p.produit.Id)
+            <div>@Html.TextBoxFor(p => p.produit.Id, new { @class = "form-control" })</div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(p => p.produit.Code)
+            <div>@Html.TextBoxFor(p => p.produit.Code, new { @class = "form-control" })</div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(p => p.produit.Description)
+            <div>
+                @Html.TextBoxFor(p => p.produit.Description, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(p => p.produit.Libelle)
+            <div>
+                @Html.TextBoxFor(p => p.produit.Libelle, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(p => p.produit.Prix)
+            <div>
+                @Html.TextBoxFor(p => p.produit.Prix, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(p => p.produit.Stock)
+            <div>
+                @Html.TextBoxFor(p => p.produit.Stock, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(p => p.produit.Categorie)
+            <div>
+                @Html.DropDownListFor(p => p.produit.CategorieId, items, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group form-check">
+            @Html.LabelFor(p => p.produit.Actif)
+            <div>
+                @Html.CheckBoxFor(p => p.produit.Actif, new { @class = "form-check-input" })
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Valider</button>
+    }
+
+</div>

@@ -1,12 +1,13 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - E-Commerce App ASP.NET</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -17,10 +18,23 @@
                     <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink("E-Commerce App", "Index", "Home", new { area = "" }, new { @class = "navbar-brand logo" })
-                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li style="display: flex; align-items: center;">
+
+                        <input style="width: 15vw; height: 4vh;" type="text" name="search" id="search" value="" />
+                        @Html.ActionLink("Search", "Search", "Home", new { search = "xxx" }, new { @class = "link" })
+
+                        <script>
+                            $(function () {
+                                $('.link').click(function () {
+                                    var search = $("#search").val();
+                                    this.href = this.href.replace("xxx", search);
+                                });
+                            });
+                        </script>
+                    </li>
                     <li>@Html.ActionLink("Accueil", "Index", "Home")</li>
                     <li>@Html.ActionLink("Ajouter un produit", "Add", "Home")</li>
                 </ul>
@@ -35,7 +49,7 @@
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
+ 
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>

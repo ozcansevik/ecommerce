@@ -16,13 +16,7 @@ namespace WebApplication.Controllers
         {
             BusinessLayerManager blm = BusinessLayerManager.Instance;
 
-            if (p.edition)
-            {
-                blm.ModifierProduit(p.produit);
-            } else
-            {
-                blm.AjouterProduit(p.produit);
-            }
+            blm.AjouterProduit(p.produit);
                      
             return RedirectToAction("Index", "Home");
         }

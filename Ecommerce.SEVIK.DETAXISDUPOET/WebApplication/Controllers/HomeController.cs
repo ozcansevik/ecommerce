@@ -38,13 +38,20 @@ namespace WebApplication.Controllers
             Produit pToEdit = blm.GetProduit(id);
 
             AddProduitViewModel addproduitViewModel = new AddProduitViewModel(pToEdit);
-            return View("Add", addproduitViewModel);
+            return View(addproduitViewModel);
         }
 
         public ActionResult Delete()
         {
             AddProduitViewModel addproduitViewModel = new AddProduitViewModel();
             return View(addproduitViewModel);
+        }
+
+
+        public ActionResult Search(String search)
+        {
+            ProduitViewModel produitViewModel = new ProduitViewModel(search);
+            return View(produitViewModel);
         }
     }
 }
