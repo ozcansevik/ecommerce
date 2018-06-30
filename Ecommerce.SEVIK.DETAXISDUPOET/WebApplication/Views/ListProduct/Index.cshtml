@@ -1,39 +1,9 @@
 ﻿@model WebApplication.Models.ViewModel.ProduitViewModel
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "List product";
 }
 
 <div class="row body_home">
-
-    <div class="custom_card">
-        <h3>Commandes</h3>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Observation</th>
-                    <th scope="col">Statut</th>
-                    <th scope="col">DateCommand</th>
-                    <th scope="col">Client</th>
-                </tr>
-            </thead>
-
-            <tbody>
-
-                @foreach (var c in Model.Commandes)
-                {
-                <tr>
-                    <td> <a href="/Home/DetailCommande/@c.Id"> @c.Id </td>
-                    <td> <a href="/Home/DetailCommande/@c.Id"> @c.Observation</td>
-                    <td> <a href="/Home/DetailCommande/@c.Id"> @c.Statut</td>
-                    <td> <a href="/Home/DetailCommande/@c.Id"> @c.DateCommand</td>
-                    <td> <a href="/Home/DetailCommande/@c.Id"> @c.Client</td>
-                </tr>
-                }
-
-            </tbody>
-        </table>
-    </div>
 
     <div class="custom_card">
         <h3>Produits</h3>
@@ -75,4 +45,3 @@
 
 
     </div>
-

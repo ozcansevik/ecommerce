@@ -29,7 +29,7 @@ namespace WebApplication.Controllers
         public ActionResult Add()
         {
             AddProduitViewModel addproduitViewModel = new AddProduitViewModel();
-            return View(addproduitViewModel);
+            return View("../Add/Add",addproduitViewModel);
         }
 
         public ActionResult Edit(int id)
@@ -38,13 +38,17 @@ namespace WebApplication.Controllers
             Produit pToEdit = blm.GetProduit(id);
 
             AddProduitViewModel addproduitViewModel = new AddProduitViewModel(pToEdit);
-            return View(addproduitViewModel);
+            return View("../Edit/Edit",addproduitViewModel);
         }
 
-        public ActionResult Delete()
+        public ActionResult Delete(int id)
         {
-            AddProduitViewModel addproduitViewModel = new AddProduitViewModel();
-            return View(addproduitViewModel);
+            BusinessLayerManager blm = BusinessLayerManager.Instance;
+            blm.SupprimerProduit(id);
+
+            ProduitViewModel produitViewModel = new ProduitViewModel();
+        
+            return View("Index", produitViewModel);
         }
 
 
